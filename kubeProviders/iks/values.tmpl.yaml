@@ -1,0 +1,8 @@
+docker-registry:
+  enabled: false
+
+jenkins-x-platform:
+  # lets disable creating the jenkins-x-docker-cfg secret
+  # we can manage that by hand for now
+  .PipelineSecrets:
+    DockerConfig: ""

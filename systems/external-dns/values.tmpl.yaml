@@ -1,0 +1,31 @@
+external-dns:
+  enabled: {{ .Requirements.ingress.externalDNS }}
+  sources:
+  - ingress
+{{- if eq .Requirements.cluster.provider "eks"}}
+  provider: aws
+  aws:
+    region: {{ .Requirements.cluster.region}}
+  securityContext:
+    fsGroup: 65534
+{{- else if eq .Requirements.cluster.provider "gke"}}
+  provider: google
+  google:
+    serviceAccountSecret: external-dns-gcp-sa
+ {{- if hasKey .Requirements.cluster "project" }}
+    project: "{{ .Requirements.cluster.project }}"
+ {{ end }}
+{{- else if eq .Requirements.cluster.provider "aks"}}
+  provider: azure
+  azure:
+    secretName: azure-external-dns-secret
+{{- end}}
+
+  rbac:
+    create: true
+  domainFilters:
+{{- range .Requirements.environments }}
+ {{- if .ingress.domain }}
+  - "{{ .ingress.domain }}"
+  {{- end }}
+{{- end }}
