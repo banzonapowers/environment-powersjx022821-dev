@@ -1,0 +1,10 @@
+adminUser:
+  password: local:powersjx022821/adminUser:password
+  username: admin
+enableDocker: false
+pipelineUser:
+  email: arnel@banzon.net
+  token: local:powersjx022821/pipelineUser:token
+  username: banzona
+prow:
+  hmacToken: local:powersjx022821/prow:hmacToken
