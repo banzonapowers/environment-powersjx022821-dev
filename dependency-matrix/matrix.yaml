@@ -1,0 +1,7 @@
+dependencies:
+- host: github.com
+  owner: banzonapowers
+  repo: 022821repo
+  url: https://github.com/banzonapowers/022821repo.git
+  version: ""
+  versionURL: ""

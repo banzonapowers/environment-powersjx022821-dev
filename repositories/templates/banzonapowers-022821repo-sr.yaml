@@ -1,0 +1,48 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: banzonapowers
+    provider: github
+    repository: 022821repo
+  managedFields:
+  - apiVersion: jenkins.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:owner: {}
+          f:provider: {}
+          f:repository: {}
+      f:spec:
+        .: {}
+        f:description: {}
+        f:httpCloneURL: {}
+        f:org: {}
+        f:provider: {}
+        f:providerKind: {}
+        f:providerName: {}
+        f:repo: {}
+        f:scheduler:
+          .: {}
+          f:kind: {}
+          f:name: {}
+        f:url: {}
+    manager: jx
+    operation: Update
+    time: "2021-02-28T22:57:16Z"
+  name: banzonapowers-022821repo
+spec:
+  description: Imported application for banzonapowers/022821repo
+  httpCloneURL: https://github.com/banzonapowers/022821repo.git
+  org: banzonapowers
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: 022821repo
+  scheduler:
+    kind: ""
+    name: ""
+  url: https://github.com/banzonapowers/022821repo.git
