@@ -11,6 +11,7 @@ ciphered_text = b'gAAAAABetXhhcm52CJnfO81tb91Fb_ds3I_bGsoRHOm0H6qFUfPrrvRz_sKJEO
 unciphered_text = (cipher_suite.decrypt(ciphered_text))
 unciphered_text = str(unciphered_text,'utf-8')
 #print(unciphered_text)
+unciphered_text="thisismycreds"
 
 try:
 
